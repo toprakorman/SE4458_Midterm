@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment variables / secrets
+.env
+
+# Flask / local database
+instance/
+*.db
+*.sqlite
+*.sqlite3
+
+# Migrations cache / editor stuff
+.pytest_cache/
+.mypy_cache/
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Uploaded screenshots or temp exports if you do not want all of them tracked
+# Uncomment if needed:
+# screenshots/
+# exports/
