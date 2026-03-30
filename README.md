@@ -3,7 +3,7 @@
 ## Overview
 
 This project implements a RESTful API for an airline ticketing system.
-The system allows managing flights, booking tickets, performing check-in, and retrieving passenger lists.
+The system allows managing flights, booking tickets, performing check-ins, and retrieving passenger lists.
 
 The API follows:
 
@@ -80,7 +80,7 @@ POST /api/v1/flights/upload
 
 * Authentication: YES (admin only)
 * Paging: NO
-* Description: Upload CSV file and add multiple flights
+* Description: Upload a CSV file and add multiple flights
 
 ---
 
@@ -110,10 +110,10 @@ POST /api/v1/bookings
 * Paging: NO
 * Description:
 
-  * Books ticket for passengers
+  * Book a ticket for passengers
   * Decreases flight capacity
   * Returns ticket number
-  * Returns "Sold out" if no seats available
+  * Returns "Sold out" if no seats are available
 
 ---
 
@@ -206,13 +206,13 @@ GET /api/v1/passengers
   * flight_number + date_from
 * Seats are assigned during check-in (not during booking)
 * Passenger names are stored as plain text
-* Round trip is treated as metadata only
+* Round-trip is treated as metadata only
 * Only admin users can:
 
   * Add flights
   * Upload CSV files
 * Query Flight uses date_from as main filter
-*The reports of the k6 testing is included in this README, as projects usually have only one
+*The reports of the k6 testing are included in this README, as projects usually have only one
 
 ---
 
@@ -387,12 +387,7 @@ Overall, read operations scale well, while write operations are limited by share
 
 ## Deployment
 
-The API can be deployed using:
-
-* AWS EC2
-* AWS App Runner
-* Azure App Service
-* Google Cloud Run
+The API is deployed using an AWS EC2 instance using Gunicorn and systemd, and the PostgreSQL database is active via the AWS RDS service.
 
 Example Swagger URL:
 
@@ -445,7 +440,7 @@ python run.py
 - The Query Flight endpoint rate limiter affected load testing, so it was temporarily disabled during testing and re-enabled afterward.
 - Concurrent booking requests caused high failure rates because available seats were consumed quickly under load.
 - JWT-based testing for the booking endpoint required manual token generation and insertion into the k6 script.
-- Markdown formatting for screenshots and test scripts needed cleanup to render correctly in the README.
+- Markdown formatting for screenshots and test scripts needs cleanup to render correctly in the README.
 
 ---
 
