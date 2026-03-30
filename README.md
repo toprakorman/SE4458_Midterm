@@ -459,6 +459,6 @@ python run.py
 
 ## Submission Links
 
-* GitHub Repository: (ADD YOUR LINK)
-* Deployed Swagger URL: (ADD AFTER APP RUNNER)
+* GitHub Repository: https://github.com/toprakorman/SE4458_Midterm
+* Deployed Swagger URL: http://3.70.216.98:5000/swagger
 * Demo Video: (ADD YOUR LINK)
