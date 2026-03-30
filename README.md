@@ -456,4 +456,4 @@ python run.py
 
 * GitHub Repository: https://github.com/toprakorman/SE4458_Midterm
 * Deployed Swagger URL: http://3.70.216.98:5000/swagger
-* Demo Video: (ADD YOUR LINK)
+* Demo Video: https://drive.google.com/file/d/1beSfAI8yosThz6SpCIOoKQej9jRMlHI7/view?usp=sharing
